@@ -8,10 +8,11 @@ import {InteractionService} from './../../services/component-interaction/interac
 })
 
 export class TopBarComponent {
-
+    toggle_main_pane :boolean = false; 
     constructor(private updateService: InteractionService) {}
     changeOutside() {
-      this.updateService.changeData(true);
+      this.toggle_main_pane =!this.toggle_main_pane;
+      this.updateService.changeData(this.toggle_main_pane);
     }
     title = 'app';
 }
