@@ -16,8 +16,9 @@ button:focus  {
     -webkit-justify-content: space-between;
     justify-content: space-between;
     flex-grow: 1;
-    background: #403E3E;
-    height: 44px;  
+    background: #1E1C1C;
+    padding-top: 5px;
+    height: 50px;  
 }
 
 .iconplates{
@@ -32,7 +33,7 @@ button:focus  {
 
 .left{
     align-content: left ;
-    flex-grow:.2;
+    flex-grow:.35;
 }
 
 .center{
@@ -41,20 +42,17 @@ button:focus  {
 }
 
 .icon{
-    width:40px;
-    color: #9F9D9D;
-    margin-right: 2px;
-    padding-left: 10px;
+    color: #E0DDDD;   
     margin-top: 5px;
     cursor:pointer;
-    font-size: 16px;
+    font-size: 12px;
    }
 
 .icons-left{
    float: left;    
 }
 
-.icons-right{
+.icons-right{   
     float: right;
 }
     
@@ -64,9 +62,14 @@ button:focus  {
 }
 
 .form-control{
-    
+    height: 30px;
     color: #FFFFFF;
-    background-color: #6d6c6c;
+    background-color: #404448;
     background-image: none;
     border: 1px solid #020202;
 }
+
+.form-control:focus {
+    border-color: #444141;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.60);
+  }

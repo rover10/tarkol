@@ -9,12 +9,13 @@
         <div class="icon  icons-left"></div>
     </div> 
     <div class="iconplates center">
-        <input type="text" style="margin-top:5px;" class="form-control" id="usr">
+        <input type="text" placeholder="Search" style="margin-top:5px;" class="form-control" id="usr">
 
 
     </div> 
         
     <div class="iconplates right icons-right">
+          
             <div class="icon  icons-right">
                     <button type="button" class="btn" aria-label="Left Align">
                     <span class="glyphicon glyphicon-user glyph"></span>
@@ -33,6 +34,12 @@
                     
                     </button>        
             </div>
+            <div class="icon  icons-right">
+                    <button type="button" class="btn" aria-label="Left Align" (click)="changeOutside()">
+                    <span class="glyphicon glyphicon-plus glyph"></span>
+                    <span class="caret"></span>
+                    </button>
+            </div>             
 
     </div>        
 </div>
