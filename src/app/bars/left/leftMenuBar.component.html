@@ -1,22 +1,38 @@
-<div class="leftpane">
+<div  class="leftpane" [ngClass]="{'expanded': show}">
     <div class="container">
-        
+            
+            <button  style="background:none; " type="button" class="btn" aria-label="Left Align" (click)="toggle()">
+               <span class="glyphicon glyphicon-menu-hamburger glyph"></span> 
+            </button> 
         <table class="table table-hover">
 
                 <tbody>
                   <tr>
-                    <th scope="row"><span class="glyphicon glyphicon-plus glyph icon">  </span> <span class="label">New project</span>
+                    <th scope="row">
+                        <span class="glyphicon glyphicon-plus glyph icon">  
+                        </span> 
+                        <span [hidden]="!show">
+                        <span class="label">New project</span>
                         <span class="glyphicon glyphicon-menu-right glyph icon" style="float:right">  </span> 
+                        </span>
                     </th>
                   </tr>
                   <tr>
-                    <th scope="row"><span class="glyphicon glyphicon-folder-open glyph icon">  </span> <span class="label">Open </span>
+                    <th scope="row">
+                        <span class="glyphicon glyphicon-folder-open glyph icon">  </span> 
+                        <span [hidden]="!show">
+                        <span class="label">Open </span>
                         <span class="glyphicon glyphicon-menu-right glyph icon" style="float:right">  </span> 
+                        </span>
                     </th>
                     </tr>
                     <tr>
-                        <th scope="row"><span class="glyphicon glyphicon-cloud-upload glyph icon">  </span> <span class="label">Upload Data</span>
+                        <th scope="row">
+                            <span class="glyphicon glyphicon-cloud-upload glyph icon">  </span> 
+                            <span [hidden]="!show">
+                            <span class="label">Upload Data</span>
                             <span class="glyphicon glyphicon-menu-right glyph icon" style="float:right">  </span> 
+                            </span>
                         </th>
                     </tr>                                        
                 </tbody>

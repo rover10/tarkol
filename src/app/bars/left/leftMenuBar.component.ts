@@ -10,9 +10,9 @@ import {InteractionService} from './../../services/component-interaction/interac
 })
 
 export class LeftMenuBarComponent {
-    toggle_main_pane :boolean = false; 
+    toggle_main_pane :boolean = true; 
     subscription:Subscription;
-    show:boolean;
+    show:boolean= false;
 
     constructor(private updateService: InteractionService) {
       this.subscription = updateService.newData$.subscribe(
@@ -20,6 +20,10 @@ export class LeftMenuBarComponent {
             console.log(show);
             this.show = show;             
         });
+    }
+
+    toggle() {
+      this.show =!this.show;
     }
 
     title = 'app';

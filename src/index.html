@@ -9,15 +9,25 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <style>
-
+    body,html{
+      overflow-y: hidden;
+      height: 100%;
+      display: flex;
+      position:fixed;
+      flex-flow: column;
+      width:100%;
+      background: rgba(239, 233, 233, 0.1);
+    }
   </style>
 </head>
-<body >
+<body>
+  
     <top-bar></top-bar>
-    
-        <left-menu-bar></left-menu-bar></aside>
- 
-    <app-root></app-root>
-        
+    <div style="display:flex; flex-flow:row ; height:100%;">
+        <div style="display:flex;height:100%;position:static;flex-flow:row">
+            <left-menu-bar></left-menu-bar>
+            <app-root></app-root>
+        </div>
+    </div>    
 </body>
 </html>

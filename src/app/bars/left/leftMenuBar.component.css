@@ -23,14 +23,19 @@
     font-size:18px;
 }
 
+.expanded{
+    width:250px !important;
+    background: white !important;
+}
 .leftpane{
-    position: absolute;
+    position: relative;
     float: left;
     left:0px;
-    width:250px;
+    width:55px;
     height: 100%;
     padding: 10px;
-    background: rgb(255, 255, 255);
-    border-right-style: dotted;
+    background: rgba(7, 127, 154, 0.12);
     border-right-width: thin;
+    z-index: 99;
+    box-shadow: 1px 0px 8px silver;
   }
