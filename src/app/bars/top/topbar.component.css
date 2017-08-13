@@ -17,7 +17,7 @@ button:focus  {
     -webkit-justify-content: space-between;
     justify-content: space-between;
     flex-grow: 1;
-    background: #1E1C1C;
+    background: #24292e;
     padding-top: 5px;
     height: 50px;  
 }
@@ -29,18 +29,18 @@ button:focus  {
 
 .right{
     align-content: right ;
-    flex-grow:.2;
+    flex-grow:.25;
     margin-right: 20px;
 }
 
 .left{
     align-content: left ;
-    flex-grow:.35;
+    flex-grow:.25;
 }
 
 .center{
-    align-content: right;
-    flex-grow:.45;
+    align-content: left;
+    flex-grow:.50;
 }
 
 .icon{
