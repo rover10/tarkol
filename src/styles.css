@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+body,html{
+    overflow-y: hidden;
+    height: 100%;
+    display: flex;
+    position:fixed;
+    flex-flow: column;
+    width:100%;
+    background: rgba(239, 233, 233, 0.1);
+  }
+
+  .dropdown-menu {
+    min-width: 100px !important;
+    
+    font-size: 12.5px  !important;
+    border-radius: 0  !important;
+    margin-top:5px !important;
+ }

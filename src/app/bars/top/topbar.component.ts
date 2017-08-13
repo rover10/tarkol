@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {DropdownButtonComponent} from './../../menu/drop-down/dropdown.component';
+import {NgbdPopoverTriggers } from './../../menu/user/user.popover.component';
 import {InteractionService} from './../../services/component-interaction/interaction.service';
 
 @Component({

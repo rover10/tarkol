@@ -4,12 +4,13 @@ button{
 
 button:hover{
     color:white;
-    background: rgba(0, 0, 0, 0.075);
+    background: rgba(0, 0, 0, 0.075)    ;
 }
 
 button:focus  { 
     color: #55C5FE;
 }
+
 .topbar{
     display: -webkit-flex;
     display: flex;
@@ -23,6 +24,7 @@ button:focus  {
 
 .iconplates{
     background: none;
+    padding-right:40px;
 }
 
 .right{
@@ -63,8 +65,8 @@ button:focus  {
 
 .form-control{
     height: 30px;
-    color: #FFFFFF;
-    background-color: #404448;
+    color: #d4cece;
+    background-color: rgb(93, 92, 92);;
     background-image: none;
     border: 1px solid #020202;
 }
@@ -72,4 +74,6 @@ button:focus  {
 .form-control:focus {
     border-color: #444141;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.60);
+    background: #FFFFFF;
+    color:#303030;
   }

@@ -1,6 +1,7 @@
 .workspace{
     background: red;
-    position: relative;
-    width:100%;
+    position: absolute;
+    
+    display:flex; 
     padding: 10px;
 }
