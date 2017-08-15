@@ -5,20 +5,23 @@ import {InteractionService} from './services/component-interaction/interaction.s
 import { AppComponent } from './app.component';
 import {TopBarComponent} from './bars/top/topbar.component';
 import {LeftMenuBarComponent} from './bars/left/leftMenuBar.component'; 
+
 import {DropdownButtonComponent} from './menu/drop-down/dropdown.component';
-import {NgbdPopoverTriggers } from './menu/user/user.popover.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import{Terminal} from './terminal/terminal.component';
+import { AngularDraggableModule } from 'angular2-draggable';
+import {ResizableModule} from 'angular2-resizable';
 
 
 @NgModule({
   declarations: [
-    AppComponent, TopBarComponent, LeftMenuBarComponent,DropdownButtonComponent,NgbdPopoverTriggers 
+    AppComponent, TopBarComponent, LeftMenuBarComponent,DropdownButtonComponent,Terminal
   ],
   imports: [
-    BrowserModule, NgbModule.forRoot(), 
+    BrowserModule, NgbModule.forRoot(), AngularDraggableModule,ResizableModule,
   ],
   providers: [InteractionService],
-  bootstrap: [AppComponent, TopBarComponent,LeftMenuBarComponent,DropdownButtonComponent,NgbdPopoverTriggers ]
+  bootstrap: [AppComponent, TopBarComponent,LeftMenuBarComponent,DropdownButtonComponent,Terminal ]
 })
 export class AppModule { }

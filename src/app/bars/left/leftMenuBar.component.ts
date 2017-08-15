@@ -10,7 +10,8 @@ import {InteractionService} from './../../services/component-interaction/interac
 })
 
 export class LeftMenuBarComponent {
-    toggle_main_pane :boolean = true; 
+    toggle_main_pane :boolean = false;
+    terminal :boolean = true; 
     subscription:Subscription;
     show:boolean= false;
 
@@ -20,6 +21,22 @@ export class LeftMenuBarComponent {
             console.log(show);
             this.show = show;             
         });
+
+        this.subscription = updateService.terminal$.subscribe(
+          terminal => {
+              console.log(terminal);
+              this.terminal = terminal;             
+          });
+ 
+    }
+
+   changeOutside() {
+      this.toggle_main_pane =!this.toggle_main_pane;
+      this.updateService.changeData(this.toggle_main_pane);
+    }
+
+    showTerminal() {
+      this.updateService.showTerminal(false);
     }
 
     toggle() {

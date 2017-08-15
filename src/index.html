@@ -9,19 +9,20 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-
 </head>
-<body>
-  
+<body id='container'>
     <top-bar></top-bar>
     <div style="display:flex; flex-flow:row ; height:100%;">
         <div style="display:flex;height:100%;position:static;flex-flow:row">
             <left-menu-bar></left-menu-bar>
             <app-root></app-root>
+            
         </div>
         
     </div>
-
+   
+       
+ 
     <div style="flex-grow:1; 
     height: 30px;
     background:#e6e5e2;
@@ -32,6 +33,10 @@
     padding-left:40px;">
      &nbsp Status Bar:
     Intenet connection:<strong>Yes </strong>   
-    </div>    
+    </div>
+    <console-tab></console-tab>
+
+    <terminal></terminal>     
+
 </body>
 </html>

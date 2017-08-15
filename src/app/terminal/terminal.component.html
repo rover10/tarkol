@@ -1,0 +1,14 @@
+
+<div class="console" [hidden]="!show" ngDraggable [handle]="DemoHandle" mwlResizable (resizeEnd)="onResizeEnd($event)" >
+    <div class ="console-header" #DemoHandle >
+     Data console
+     <div class="console-control">
+        <span  class="glyphicon glyphicon-minus-sign min-button" aria-hidden="true"></span> 
+        <span class="glyphicon glyphicon-remove-sign close-button" aria-hidden="true" (click)="hideTerminal();"></span>
+    </div>
+    
+    </div>
+    <div class="console-body">
+        The console body
+    </div>
+</div> 

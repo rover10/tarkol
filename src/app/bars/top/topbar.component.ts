@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {DropdownButtonComponent} from './../../menu/drop-down/dropdown.component';
-import {NgbdPopoverTriggers } from './../../menu/user/user.popover.component';
 import {InteractionService} from './../../services/component-interaction/interaction.service';
 
 @Component({
@@ -10,7 +9,7 @@ import {InteractionService} from './../../services/component-interaction/interac
 })
 
 export class TopBarComponent {
-    toggle_main_pane :boolean = true; 
+    toggle_main_pane :boolean = false; 
     constructor(private updateService: InteractionService) {}
     changeOutside() {
       this.toggle_main_pane =!this.toggle_main_pane;

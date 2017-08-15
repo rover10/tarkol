@@ -47,13 +47,11 @@
     align-items: end;
     flex-direction: column-reverse;">
     <div style="display:flex; flex-flow:row-reverse;">
-        
-        <div class="icon icons-right" >
-            <button style="background:none;font-size:16px;" type="button" class="btn" aria-label="Left Align">
+        <div class="icon icons-right" [hidden]="!terminal" >
+            <button style="background:none;font-size:16px;" type="button" class="btn" aria-label="Left Align" (click)="showTerminal()">
             <span class="glyphicon glyphicon-console glyph"></span>
-            
             </button>        
-    </div>
+        </div>
     </div>
     </div>
 </div>
