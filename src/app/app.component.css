@@ -1,7 +1,12 @@
 .workspace{
-    background: red;
     position: absolute;
-    
     display:flex; 
     padding: 10px;
 }
+
+
+.author{
+	text-align:right;
+	font-weight:bold;	
+}
+

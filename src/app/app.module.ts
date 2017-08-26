@@ -13,13 +13,14 @@ import{Terminal} from './terminal/terminal.component';
 import { AngularDraggableModule } from 'angular2-draggable';
 import {ResizableModule} from 'angular2-resizable';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent, TopBarComponent, LeftMenuBarComponent,DropdownButtonComponent,Terminal
   ],
   imports: [
-    BrowserModule, NgbModule.forRoot(), AngularDraggableModule,ResizableModule,
+    BrowserModule, NgbModule.forRoot(), AngularDraggableModule,ResizableModule,BrowserAnimationsModule,
   ],
   providers: [InteractionService],
   bootstrap: [AppComponent, TopBarComponent,LeftMenuBarComponent,DropdownButtonComponent,Terminal ]

@@ -35,10 +35,12 @@
     width: 55px;
     height: 100%;
     padding: 10px;
-    background: #e6e5e2;
+    background: white;
     border-right-width: thin;
     z-index: 99;
-    box-shadow: 1px 0px 8px silver;
+    border-right: #aec3fd;
+    border-right-style: solid;
+    border-right-width: thin;
     display: flex;
     flex-direction: column;
   }
