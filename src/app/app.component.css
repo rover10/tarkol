@@ -4,9 +4,20 @@
     padding: 10px;
 }
 
-
+img{
+    -webkit-transition: box-shadow 2s, background .5s, padding .5s; /* Safari */
+    transition: box-shadow 2s, background .5s, padding .5s;
+   padding: 15px;
+   width:120px;
+   height:120px;
+}
 .author{
 	text-align:right;
 	font-weight:bold;	
 }
 
+img:hover{
+  padding:5px;
+  color: red;
+ 
+}
