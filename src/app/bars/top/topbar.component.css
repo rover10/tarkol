@@ -47,7 +47,7 @@ button:focus  {
 }
 
 .icon{
-    color: grey;   
+    color: #000000;   
     margin-top: 5px;
     cursor:pointer;
     font-size: 12px;
