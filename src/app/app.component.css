@@ -2,6 +2,7 @@
     position: absolute;
     display:flex; 
     padding: 10px;
+    background:white;
 }
 
 img{

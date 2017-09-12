@@ -17,13 +17,14 @@ import {ResizableModule} from 'angular2-resizable';
 import { HttpModule }    from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { UploadModal } from './modals/upload.component';
 
 import 'rxjs/add/operator/toPromise';
 
 
 @NgModule({
   declarations: [
-    AppComponent, TopBarComponent, LeftMenuBarComponent,DropdownButtonComponent,Terminal
+    AppComponent, TopBarComponent, LeftMenuBarComponent,DropdownButtonComponent,Terminal,UploadModal
   ],
   imports: [
     BrowserModule, NgbModule.forRoot(), AngularDraggableModule,ResizableModule,BrowserAnimationsModule, HttpModule,

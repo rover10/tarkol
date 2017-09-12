@@ -4,7 +4,7 @@ import {InteractionService} from './../../services/component-interaction/interac
 import { HttpModule }    from '@angular/http';
 import { Injectable }    from '@angular/core';
 import { Headers, Http } from '@angular/http';
-
+import {UploadModal} from './../../modals/upload.component';
 import 'rxjs/add/operator/toPromise';
 
 @Component({

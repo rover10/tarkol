@@ -5,7 +5,7 @@ import {Subject} from 'rxjs/Subject';
 import {LeftMenuBarComponent} from './bars/left/leftMenuBar.component';
 
 import {InteractionService} from './services/component-interaction/interaction.service';
-
+import { UploadModal } from './modals/upload.component';
 
 @Component({
   selector: 'app-root',

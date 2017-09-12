@@ -43,5 +43,8 @@ export class LeftMenuBarComponent {
       this.show =!this.show;
     }
 
+    uploadData(){
+      this.updateService.showUploadModal(false);
+    }  
     title = 'app';
 }
