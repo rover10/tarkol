@@ -47,4 +47,8 @@ export class LeftMenuBarComponent {
       this.updateService.showUploadModal(false);
     }  
     title = 'app';
+
+    openFileViewer(){
+      this.updateService.showfileViewer(false);
+    }
 }

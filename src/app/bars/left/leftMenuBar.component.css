@@ -35,10 +35,10 @@
     width: 55px;
     height: 100%;
     padding: 10px;
-    background: white;
+    background: #fafafa;
     border-right-width: thin;
     z-index: 99;
-    border-right: #aec3fd;
+    border-right: rgba(128, 128, 128, 0.33);
     border-right-style: solid;
     border-right-width: thin;
     display: flex;

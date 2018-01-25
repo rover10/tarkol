@@ -19,8 +19,8 @@ button:focus  {
     flex-grow: 1;
     padding-top: 5px;
     height: 50px;  
-    background: rgba(245, 244, 244, 0.48);
-    border-bottom-color: rgba(80, 126, 255, 0.45);
+    background: #8cc3ff0a;
+    border-bottom-color: rgba(128, 128, 128, 0.33);
     border-bottom-style: solid;
     border-bottom-width: thin;
 }

@@ -10,16 +10,17 @@
                 font-size: 16px !important; color:grey">
                   <tr>
                     <th scope="row">
-                        <span class="glyphicon glyphicon-plus glyph icon">  
+                         <span class="glyphicon glyphicon-plus glyph icon">  
                         </span> 
+                  
                         <span [hidden]="!show">
-                        <span class="label" >New project</span>
+                           <span class="label" >New project</span>
                         <span class="glyphicon glyphicon-menu-right glyph icon" style="float:right">  </span> 
                         </span>
                     </th>
                   </tr>
                   <tr>
-                    <th scope="row">
+                    <th scope="row" (click)="openFileViewer();">
                         <span class="glyphicon glyphicon-folder-open glyph icon">  </span> 
                         <span [hidden]="!show">
                         <span class="label">Open </span>

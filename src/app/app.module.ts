@@ -18,19 +18,23 @@ import { HttpModule }    from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { UploadModal } from './modals/upload.component';
-
+import {FileViewer} from './panels/fileViewer.component';
 import 'rxjs/add/operator/toPromise';
+
+import { GraphChart } from './graphs/chart/barchart.component';
+import 'rxjs/add/operator/map';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent, TopBarComponent, LeftMenuBarComponent,DropdownButtonComponent,Terminal,UploadModal
+    AppComponent, TopBarComponent, LeftMenuBarComponent,DropdownButtonComponent,Terminal,UploadModal, FileViewer, GraphChart
   ],
   imports: [
     BrowserModule, NgbModule.forRoot(), AngularDraggableModule,ResizableModule,BrowserAnimationsModule, HttpModule,
     
   ],
-  providers: [InteractionService,  ],
-  bootstrap: [AppComponent, TopBarComponent,LeftMenuBarComponent,DropdownButtonComponent,Terminal ]
+  providers: [InteractionService, GraphChart ],
+  bootstrap: [AppComponent, TopBarComponent,LeftMenuBarComponent,DropdownButtonComponent,Terminal, FileViewer, GraphChart ]
 })
 export class AppModule { }

@@ -1,0 +1,42 @@
+<div class="panel" [hidden]="show" style="padding-left:10px;">
+{{updates}} 
+<div class="btn-group" style="display: flex;">
+       <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-outline-primary" ngbDropdownToggle>Files</button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+            <button class="dropdown-item" (click)="readFile('Draft.txt')">Draft.txt</button>
+            <button class="dropdown-item"  (click)="getStream(file)" *ngFor = "let file of allFiles" >{{file}}</button>
+
+            </div>
+        </div>
+        
+      <button class="btn btn-outline-primary" (click)="clear()"> Clear</button>
+</div>
+ 
+<div style="margin-top:20px;width: inherit;">
+<ngb-tabset>
+    <ngb-tab title="{{activeFile}}"> 
+      <ng-template ngbTabContent style="">
+        <div style="position:relative; text-align:left !important;">
+          <div [hidden]="loading" style="position:fixed; margin-left:20%;margin-top:15%;">
+            <img  src="./assets/images/ajax-loader.gif">
+          </div>
+        <span  *ngFor="let line of fileData"  class= "fileDisplay" style="text-align:left !important;">
+             {{line}}
+        </span>
+        </div>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab  class= "fileDisplay">
+      <ng-template ngbTabTitle><b>loan</b> csv</ng-template>
+      <ng-template ngbTabContent style="padding:5px;font-size:12px;"><p>sbi,account,amount</p>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="Disabled" [disabled]="true"  class= "fileDisplay">
+      <ng-template ngbTabContent style="padding:5px;font-size:12px;">
+        <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi. Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio. Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna, egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
+</div>

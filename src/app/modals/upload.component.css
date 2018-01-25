@@ -1,8 +1,17 @@
 .tmodal{
     
-    width: 40%;
-    height: 30%;
-    position: fixed;
-    top:35%;
-    left:30%;
+    width: 90%;
+    height: 250px;
+    position: relative;
+    top: 20%;
+    left: 55%;
+    background: #fafafa;
+    z-index: 9999999;
+    min-width: 350px;
+    min-height: 250px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    padding: 10px;
+    border-width: thin;
+    border-color: darkblue;
+    border-style: solid;
 }

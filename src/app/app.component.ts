@@ -6,6 +6,10 @@ import {LeftMenuBarComponent} from './bars/left/leftMenuBar.component';
 
 import {InteractionService} from './services/component-interaction/interaction.service';
 import { UploadModal } from './modals/upload.component';
+import {FileViewer} from './panels/fileViewer.component';
+
+import { GraphChart } from './graphs/chart/barchart.component';
+import { Stocks } from './shared/data/data'; 
 
 @Component({
   selector: 'app-root',

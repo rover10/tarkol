@@ -3,6 +3,8 @@
     display:flex; 
     padding: 10px;
     background:white;
+    flex-flow: column;
+    flex-direction: right;
 }
 
 img{
@@ -22,3 +24,4 @@ img:hover{
   color: red;
  
 }
+

@@ -15,12 +15,17 @@ export class UploadModal {
   data:any;
   show:boolean = true;
   subscription:Subscription;
-
+  uploadStatus:String = "";
+  successMsg:String = "";
+  errorMsg:String = "";
   constructor(private updateService: InteractionService, private http: Http) {
     this.subscription = updateService.displayUploadModal$.subscribe(
     show => {
         console.log(show);
-        this.show = show;             
+        this.show = show;
+        this.uploadStatus = ""; 
+        this.successMsg ="";
+        this.errorMsg ="";
     });
 
     this.data = {
@@ -35,12 +40,14 @@ closeUploadModal(){
 @Input() multiple: boolean = false;
 @ViewChild('file') inputEl: ElementRef;
 
-  apiEndPoint:String = '/files';
+  apiEndPoint:String = 'proxy/files';
   formData:FormData;
   options:RequestOptions;
 
   fileChange(event) {
     let fileList: FileList = event.target.files;
+    this.errorMsg ="";
+    this.successMsg ="";
     if(fileList.length > 0) {
         let file: File = fileList[0];
          this.formData = new FormData();
@@ -80,12 +87,21 @@ upload(){
     */
  
     console.log("UPLOADING FILE..");
+    this.uploadStatus = "Uploading...";
     this.http.post(`${this.apiEndPoint}`, this.formData, this.options)
-    .map(res => res.json())
+   // .map(res => res.json())
     .catch(error => Observable.throw(error))
     .subscribe(
-        data => console.log('success'),
-        error => console.log(error)
+        data => {
+            console.log('success');
+            this.successMsg = "Successfully uploaded!";
+            this.uploadStatus = "";
+        },
+        error =>{
+            console.log(error);
+            this.errorMsg = "Failled to upload: Error "+ error;
+            this.uploadStatus = "";
+        }
     );
 
     console.log("Sent data!!");

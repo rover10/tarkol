@@ -7,11 +7,13 @@ export class InteractionService {
     private newDataSource = new Subject<boolean>();
     private terminal = new Subject<boolean>();
     private uploadModal = new Subject<boolean>();
-
+    private fileViewer = new Subject<boolean>();
     // Observable boolean streams
     newData$ = this.newDataSource.asObservable();
     terminal$ = this.terminal.asObservable();
-    displayUploadModal$ =this.uploadModal.asObservable();
+    displayUploadModal$ =  this.uploadModal.asObservable();
+    fileViewer$ = this.fileViewer.asObservable();
+    
     changeData(data: boolean) {
         this.newDataSource.next(data);
     }
@@ -24,4 +26,7 @@ export class InteractionService {
         this.uploadModal.next(show);
     }
 
+    showfileViewer(show:boolean){
+        this.fileViewer.next(show);
+    };
 }

@@ -1,3 +1,59 @@
+Setting up proxy 
+-----------------------
+edit "start" of your package.json to look below
+
+"start": "ng serve --proxy-config proxy.conf.json",
+
+create a new file called proxy.conf.json in the root of the project and inside of that define your proxies like below
+
+
+{
+  "/proxy/*": {
+  "target": "https://url.com",
+  "secure": false,
+  "changeOrigin": true,
+  "logLevel": "debug",
+  "pathRewrite": {"^/proxy" : ""}
+  }
+}
+
+
+
+// Now replace all AJAX url path with proxy/REST_OF_THE_PATH_AS_USUAL
+// For this project my API server is running at localhost:5000/ so my configuration looks like this
+
+
+  "/proxy/*": {
+  "target": "localhost:5000/",
+  "secure": false,
+  "changeOrigin": true,
+  "logLevel": "debug",
+  "pathRewrite": {"^/proxy" : ""}
+  }
+}
+
+
+
+Important thing is that you use npm start instead of ng serve
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # FirstApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.6.

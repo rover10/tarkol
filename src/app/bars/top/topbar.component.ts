@@ -25,7 +25,7 @@ export class TopBarComponent {
 
     newProject(){
       console.log('Sending get request');
-      this.http.get(`topics/1`)
+      this.http.get(`/proxy/topics/1`)
       .toPromise()
       .then(response => {console.log(response.json()); alert(response.json())})
       .catch(this.handleError);

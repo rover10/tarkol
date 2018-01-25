@@ -5,51 +5,47 @@ width: 100%;
 height: 100%;
 left: 0px;
 top: 0px;
-background: rgba(255, 255, 255, 0.96);
+background: rgba(250, 250, 250, 0.97);
 z-index: 999999999999999999999999999999999999999999999999999999999999;">
-<div class="tmodal" style=" 
-width: 50%;
-height: 45%;
-position: absolute;
-top: 20%;
-left: 25%;
-background: #ffffff;
-z-index: 9999999;
-min-width: 350px;
-min-height: 250px;
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-padding: 20px;
-border-width: thin;
-border-color: #aec3fd;
-border-style: solid;
-">
-<div class="tmodal-title" style="float:right;width:100%;padding:5px;border-bottom-style: inset;">
-    <div style="float:left;"><span style="margin-top:0px;font-size:20px;"><span class="glyphicon glyphicon-hdd"></span> File uploader</span></div>
+<div class="tmodal" >
+<div class="tmodal-title" style="float:right;width:100%;padding:5px;border-bottom-style: inset;border-color:#aec3fd;border-width:thin;border-color:darkblue">
+    <div style="float:left;"><span style="margin-top:0px;font-size:20px;">
+        <span class="glyphicon glyphicon-hdd"></span> Upload new file</span></div>
     <div style="float:right;">
     <a href="#" style="color:grey;" (click)="closeUploadModal();">
             <span class="glyphicon glyphicon-remove"></span>
             </a>
     </div>
 </div>    
-   <HR>
+   
    
     <div style="margin-top:50px;">
   
-        <h4 style="color:#08598a;"><strong>Upload your new data file here</strong></h4>
-        <BR><BR>
+        <BR>
+        <h6>
+           Status: {{uploadStatus}} 
+            <span style="color:green;"><strong> {{successMsg}}</strong></span> 
+            <span style="color:saddlebrown;">{{errorMsg}}</span>
+        </h6>
+        <BR>
+        <BR>
+        <BR>
         <DIV>
                 
 
         
-        <input type="file" (change)='fileChange($event);' placeholder="Upload file" style="display:unset;">
+        <input type="file" (change)='fileChange($event);' placeholder="Upload file" style="display:unset;float:left; padding:3px;   background: whitesmoke;">
         <!--input type="file" name="file" style="display:unset;" --> 
         <span style="padding-left:5px;">
-            <button  (click)="upload();" style="border-style:solid;width:120px;padding:5px;background:none;border-color: #aec3fd; ">
+            <button  (click)="upload();" style="border-style:none;width:120px;padding:5px;background:#b9deff; ">
             <span class="glyphicon glyphicon-cloud-upload glyph icon">
             </span>   Upload</button>
         </span>
         
-        
+        <span style="padding-left:5px;">
+            <button  (click)="closeUploadModal();" style="border-style:none;width:120px;padding:5px;background:#f78a8a;border-color: #aec3fd; ">
+              Close</button>
+        </span>
         </DIV>
 
     </div>  
