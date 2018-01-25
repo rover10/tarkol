@@ -13,17 +13,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="tarkol.png" sizes="32x32">
   <style>
-
     body{
         font-family: 'Open Sans', sans-serif !important;
         font-size: 16px !important;
         
     }
     .tab-content {
-    overflow-y: auto;
-    position: absolute;
-    height: 100%;
+        overflow-y: auto;
+        position: relative;
+        display: inherit;
+    }
 
+    .tab-content > .active {
+        display: flex;
+        overflow: auto;
+        height: 100%;
+        width: 100%;
     }
 
 .date{
@@ -37,9 +42,7 @@
     text-shadow: 0px 0px 2px white;
     padding-left: 8px;
     padding-right: 8px;
-
     }
-
     .axis {
     font: 10px sans-serif;
   }
@@ -94,7 +97,7 @@
                 <div style="MARGIN-LEFT: 10PX;
                 MARGIN-TOP: 20PX;
                 MARGIN-BOTTOM: 20PX;">
-                <h5>STOCK PRICE <span class ="date"> XYZ Inc </span> &nbsp; from <span class="date">2010-01-01</span> to   <span class="date">2012-05-01</span> </h5>
+                <h6>STOCK PRICE <span class ="date"> XYZ Inc </span> &nbsp; from <span class="date">2010-01-01</span> to   <span class="date">2012-05-01</span> </h6>
                 </div>
                 <div style="
                 position: relative;

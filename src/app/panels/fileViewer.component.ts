@@ -59,7 +59,7 @@ export class FileViewer {
     })
 
     */
-    this.http.get('proxy/bucket/files')
+    this.http.get('api/bucket/files')
     .toPromise()
     .then(response => {
         console.log(response.json());
@@ -79,7 +79,7 @@ closeFileViewer(){
 @Input() multiple: boolean = false;
 @ViewChild('file') inputEl: ElementRef;
 
-  apiEndPoint:String = 'proxy/files';
+  apiEndPoint:String = 'api/files';
   formData:FormData;
   options:RequestOptions;
   fileData: String[] = new Array(4); // It would be an array with Rich meta data  and actual file content in another array in future
@@ -107,7 +107,7 @@ closeFileViewer(){
 readFile(fileName){
     console.log("UPLOADING FILE..");
     
-    this.http.get('proxy/read/?fileName=draft&user=rakesh')
+    this.http.get('api/read/?fileName=draft&user=rakesh')
     .toPromise()
     .then(response => {
         console.log(response.json());
@@ -125,7 +125,7 @@ readFile(fileName){
 
 getStream(file){
     /*
-    this.http.get('proxy/read/?fileName=draft&user=rakesh')
+    this.http.get('api/read/?fileName=draft&user=rakesh')
     .toPromise()
     .then(response => {
         console.log(response.json());
@@ -135,9 +135,9 @@ getStream(file){
     */
     this.loading = false;
     this.activeFile = file;
-    let uri = "proxy/bucket/stream/file?filename="+file;
+    let uri = "api/bucket/stream/file?filename="+file;
     let eventSource:EventSourcePolyfill = new EventSourcePolyfill(uri, {headers: {Accept:'*/*', headerName: 'HeaderValue', header2: 'HeaderValue2' }});
-    //let eventSource:EventSourcePolyfill = new EventSourcePolyfill('proxy/stream/file/?fileName=Draft.txt&user=rakesh', {headers: {Accept:'*/*', headerName: 'HeaderValue', header2: 'HeaderValue2' }});
+    //let eventSource:EventSourcePolyfill = new EventSourcePolyfill('api/stream/file/?fileName=Draft.txt&user=rakesh', {headers: {Accept:'*/*', headerName: 'HeaderValue', header2: 'HeaderValue2' }});
     this.fileData = [];
     eventSource.onmessage = (data => { 
             console.log(data);
@@ -165,7 +165,8 @@ getStream(file){
 
 
 clear(){
-    this.fileData.splice(0, this.fileData.length);   
+    this.fileData.splice(0, this.fileData.length);
+    this.activeFile = 'Untitled';   
 }
 
 }

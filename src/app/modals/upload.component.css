@@ -4,10 +4,10 @@
     height: 250px;
     position: relative;
     top: 20%;
-    left: 55%;
-    background: #fafafa;
+    left: 5%;
+    background: white;
     z-index: 9999999;
-    min-width: 350px;
+    min-width: 380px;
     min-height: 250px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     padding: 10px;

@@ -10,9 +10,9 @@
 img{
     -webkit-transition: box-shadow 2s, background .5s, padding .5s; /* Safari */
     transition: box-shadow 2s, background .5s, padding .5s;
-   padding: 15px;
-   width:120px;
-   height:120px;
+   padding: 25px;
+   width:95px;
+   height:95px;
 }
 .author{
 	text-align:right;

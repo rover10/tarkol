@@ -2,38 +2,37 @@
 
 
 
-            <div style="flex-grow:column;position:relative;height:100%;width:100%;text-align: center;background:white;"> 
-                <!-- -->    
-                <div style="display:flex;height:100%; box-shadow: 0px 0px 10px #dcdada59 inset;">
-                    <div  style="padding:20px; background:none;flex-grow:1;border-right-width: thin;" >
-                        <img style="cursor:pointer;" src="./assets/images/datacleaning.svg" width="100px;" height="100px;"/>
-                        <br>
-                        Data pre-processing  
+<div style="flex-grow:column;position:relative;height:100%;width:100%;text-align: center;background:white;overflow:auto"> 
+    <!-- -->    
+    <div style="display:flex;position:relative;  box-shadow: 0px 0px 10px #dcdada59 inset;">
+        <div  style="padding:20px; background:none;flex-grow:1;border-right-width: thin;" >
+            <img style="cursor:pointer;" src="./assets/images/datacleaning.svg"  height="25px"/>
+            <br>
+            Data pre-processing  
 
-                    </div>
-                    
-                    <div style="padding:20px; background:none;flex-grow:1;border-right-width: thin;font-family: 'Catamaran', sans-serif;">
-                        <img  style="cursor:pointer;" src="./assets/images/mining.svg"  width="100px;" height="100px;"/>
-                        <br>                        
-                        Mining
-                    </div>
-                    <div style=" padding:20px; background:none;flex-grow:1;border-right-width: thin;">
-                        <img  style="cursor:pointer;" src="./assets/images/visualization.svg"  width="100px;" height="100px;"/>
-                        <br>                        
-                        Visualization        
-                    </div>
-                    <div style="padding:20px; background:none;flex-grow:1;;">
-                        <img  style="cursor:pointer;" src="./assets/images/analytics.svg"  width="100px;" height="100px;"/>
-                        <br>                       
-                        Analytics     
-                    </div>
-                </div>    
-                <!-- -->
-            
-                <upload-modal></upload-modal>
-                
-                <file-viewer></file-viewer>
-               
-             </div>
+        </div>
+        
+        <div style="padding:20px; background:none;flex-grow:1;border-right-width: thin;font-family: 'Catamaran', sans-serif;">
+            <img  style="cursor:pointer;" src="./assets/images/mining.svg"  height="25px"/>
+            <br>                        
+            Mining
+        </div>
+        <div style=" padding:20px; background:none;flex-grow:1;border-right-width: thin;">
+            <img  style="cursor:pointer;" src="./assets/images/visualization.svg"   height="25px"/>
+            <br>                        
+            Visualization        
+        </div>
+        <div style="padding:20px; background:none;flex-grow:1;;">
+            <img  style="cursor:pointer;" src="./assets/images/analytics.svg"   height="25px"/>
+            <br>                       
+            Analytics     
+        </div>
+    </div>    
+    <!-- -->
 
-            
+    <upload-modal></upload-modal>
+    <div style="display:grid;">
+    <file-viewer></file-viewer>
+    </div>
+ </div>
+

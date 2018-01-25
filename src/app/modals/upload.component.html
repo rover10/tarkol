@@ -1,11 +1,11 @@
 <div 
 [hidden]="show" 
-style="    position: absolute;
+style="    position: relative;
 width: 100%;
 height: 100%;
 left: 0px;
 top: 0px;
-background: rgba(250, 250, 250, 0.97);
+background: white;
 z-index: 999999999999999999999999999999999999999999999999999999999999;">
 <div class="tmodal" >
 <div class="tmodal-title" style="float:right;width:100%;padding:5px;border-bottom-style: inset;border-color:#aec3fd;border-width:thin;border-color:darkblue">
@@ -22,11 +22,11 @@ z-index: 999999999999999999999999999999999999999999999999999999999999;">
     <div style="margin-top:50px;">
   
         <BR>
-        <h6>
-           Status: {{uploadStatus}} 
+        <h3>
+           {{uploadStatus}} 
             <span style="color:green;"><strong> {{successMsg}}</strong></span> 
             <span style="color:saddlebrown;">{{errorMsg}}</span>
-        </h6>
+        </h3>
         <BR>
         <BR>
         <BR>
@@ -40,11 +40,6 @@ z-index: 999999999999999999999999999999999999999999999999999999999999;">
             <button  (click)="upload();" style="border-style:none;width:120px;padding:5px;background:#b9deff; ">
             <span class="glyphicon glyphicon-cloud-upload glyph icon">
             </span>   Upload</button>
-        </span>
-        
-        <span style="padding-left:5px;">
-            <button  (click)="closeUploadModal();" style="border-style:none;width:120px;padding:5px;background:#f78a8a;border-color: #aec3fd; ">
-              Close</button>
         </span>
         </DIV>
 

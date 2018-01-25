@@ -40,7 +40,7 @@ closeUploadModal(){
 @Input() multiple: boolean = false;
 @ViewChild('file') inputEl: ElementRef;
 
-  apiEndPoint:String = 'proxy/files';
+  apiEndPoint:String = 'api/files';
   formData:FormData;
   options:RequestOptions;
 

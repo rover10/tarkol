@@ -1,9 +1,10 @@
 {
-    "/proxy/*": {
-    "target": "http://localhost:5000/",
+    "/api/*": {
+    "target": "http://localhost:5000/",  
     "secure": false,
     "changeOrigin": true,
-    "logLevel": "debug",
-    "pathRewrite": {"^/proxy" : ""}
+    "logLevel": "debug"
+    
     }
+
   }
